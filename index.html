@@ -3,113 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myeongseb Ko - Personal Website</title>
+    <title>Myeongseb Ko</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
         }
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center;
             margin-bottom: 40px;
         }
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        main {
-            display: flex;
-            gap: 40px;
-        }
-        .left-column {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .right-column {
-            flex: 2;
+        h1, h2, h3 {
+            color: #444;
         }
         .profile-img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .contact-info {
+            text-align: center;
             margin-bottom: 20px;
         }
         .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .social-links a {
             text-decoration: none;
             color: #0066cc;
+            margin: 0 10px;
         }
-        h1, h2 {
-            color: #444;
+        .section {
+            margin-bottom: 40px;
         }
-        .twitter-link {
-            margin-top: 20px;
+        .publication-list, .employment-list {
+            list-style-type: none;
+            padding-left: 0;
         }
-        .twitter-link img {
-            width: 24px;
-            vertical-align: middle;
-            margin-right: 5px;
+        .publication-list li, .employment-list li {
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Myeongseb Ko's Homepage</h1>
-        <nav>
-            <a href="publications.html">Publications</a>
-            <a href="cv.html">CV</a>
-        </nav>
+        <h1>Myeongseb Ko</h1>
+        <img src="ms.png" alt="Myeongseb Ko" class="profile-img">
     </header>
-
-    <main>
-        <div class="left-column">
-            <img src="your-profile-picture.jpg" alt="Myeongseb Ko" class="profile-img">
-            <h2>Myeongseb Ko</h2>
-            <p>Ph.D. student at Virginia Tech</p>
-            <p>Blacksburg, Virginia, USA</p>
-            <div class="social-links">
-                <a href="mailto:myeongseob@vt.edu">Email</a>
-                <a href="https://www.linkedin.com/in/myeongseob-ko-a87325175/">LinkedIn</a>
-                <a href="https://github.com/yourusername">GitHub</a>
-                <a href="https://scholar.google.co.kr/citations?user=SzTJiGcAAAAJ&hl=en&oi=ao">Google Scholar</a>
-            </div>
-            <div class="twitter-link">
-                <a href="https://x.com/KoMyeongseob">
-                    <img src="twitter-icon.png" alt="Twitter">
-                    Check my latest post on Twitter!
-                </a>
-            </div>
-        </div>
-
-        <div class="right-column">
-            <h2>About Me</h2>
-            <p>I am a Ph.D. student at Virginia Tech, advised by Prof. Ruoxi Jia. My primary research interests lie in [Your research interests here]. This specialization reflects my commitment to [Your research goals or aspirations].</p>
-
-            <p>I earned my M.S. in Electronics and Information Engineering from Korea University in 2018, where I worked on 3D Pedestrian Tracking and Fall Detection. Prior to my graduate studies, I received my B.S. in Electronics and Information Engineering from Korea University in 2016.</p>
-
-            <p>My current research focuses on [Your current research focus]. I am passionate about [Your research passion or motivation].</p>
-
-            <p>I am actively seeking collaboration opportunities and always open to discussing research ideas. Feel free to reach out to me at myeongseob@vt.edu if you'd like to connect!</p>
-        </div>
-    </main>
+    
+    <div class="contact-info">
+        <p>Ph.D. student at Virginia Tech</p>
+        <p>Blacksburg, Virginia, USA</p>
+        <p>Email: myeongseob@vt.edu</p>
+    </div>
+    
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/myeongseob-ko-a87325175/">LinkedIn</a>
+        <a href="https://github.com/yourusername">GitHub</a>
+        <a href="https://scholar.google.co.kr/citations?user=SzTJiGcAAAAJ&hl=en&oi=ao">Google Scholar</a>
+        <a href="https://x.com/KoMyeongseob">Twitter</a>
+    </div>
+    
+    <div class="section">
+        <h2>About</h2>
+        <p>Hi! I am a 4th year Ph.D. student in Computer Engineering at Virginia Tech, fortunately working under the supervision of Prof. Ruoxi Jia. Prior to joining Virginia Tech, I received my M.S. (2018) and B.S. (2016) in Electronics and Information Engineering from Korea University.</p>
+        <p>I am deeply interested in understanding machine learning problems, Recently, I have been studying unlearning problems for foundation models. Additionally, I am also interested in machine learning problems through the lens of data.</p>
+    </div>
+    
+<div class="section">
+    <h2>Research Publications</h2>
+    
+    <h3>Under Review</h3>
+    <ul class="publication-list">
+        <li>[P1] <strong>M. Ko</strong>, Hoang Anh Just, Charles Fleming, Ming Jin, Ruoxi Jia, "The Ripple Effect: Probing Hidden Knowledge Holes in Unlearned LLMs," Submitted to NAACL 2025.</li>
+        <li>[P2] Henry Li, Jonathan Patsenker, <strong>M. Ko</strong>, Ruoxi Jia, Yuval Kluger, "Diffusion Conditional Sampling: Solving Inverse Problems through a Frequentist's Lens," Submitted to ICLR 2025.</li>
+    </ul>
+    
+    <h3>Conference</h3>
+    <ul class="publication-list">
+        <li>[C1] <strong>M. Ko</strong>, Henry Li, Zhun Wang, Jonathan Patsenker, Jiachen T. Wang, Qinbin Li, Ming Jin, Dawn Song, Ruoxi Jia, "Boosting Alignment for Post-Unlearning Text-to-Image Generative Models," Accepted to NeurIPS 2024.</li>
+        <li>[C2] <strong>M. Ko</strong>, F. Kang, W. Shi, M. Jin, Z. Yu, and R. Jia, "The Mirrored Influence Hypothesis: Efficient Data Influence Estimation by Harnessing Forward Passes," in <i>Proceedings of the IEEE Computer Vision and Pattern Recognition (CVPR)</i>, 2024. <a href="https://arxiv.org/pdf/2402.08922.pdf">[pdf]</a> <i>ICML 2023 Workshop on Counterfactuals in Minds & Machines.</i> <a href="https://icml.cc/virtual/2023/26728">[workshop url]</a></li>
+        <li>[C3] <strong>M. Ko</strong>, M. Jin, C. Wang, and R. Jia, "Practical Membership Inference Attacks Against Large-Scale Multi-Modal Models: A Pilot Study," in <i>Proceedings of the IEEE International Conference on Computer Vision (ICCV)</i>, 2023. <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ko_Practical_Membership_Inference_Attacks_Against_Large-Scale_Multi-Modal_Models_A_Pilot_ICCV_2023_paper.pdf">[pdf]</a></li>
+        <li>[C4] <strong>M. Ko*</strong>, X. Yang*, Z. Ji, H. A. Just, P. Gao, A. Kumar, and R. Jia, "PRIVMON: Real-Time Platform-Agnostic Privacy Leakage Detection for Machine Learning Models," in <i>Proceedings of the 26th International Symposium on Research in Attacks, Intrusions and Defenses (RAID)</i>, 2023, pp. 264--281. <a href="https://dl.acm.org/doi/pdf/10.1145/3607199.3607232">[pdf]</a></li>
+        <li>[C5] H. A. Just, F. Kang, J. T. Wang, Y. Zeng, <strong>M. Ko</strong>, M. Jin, and R. Jia, "LAVA: Data Valuation Without Pre-specified Learning Algorithms," in <i>Proceedings of the International Conference on Learning Representations (ICLR)</i>, 2023 (<strong>Spotlight</strong>). <a href="https://arxiv.org/pdf/2305.00054.pdf">[pdf]</a></li>
+        <li>[C6] D. Kim, S. Kim, M. Kim, <strong>M. Ko</strong>, and K. Kim, "Illumination invariant skin texture generation using CGAN from a single image for haptic augmented palpation," in <i>Proceedings of the IEEE Robotics and Automation Society (IRC)</i>, 2019. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8675578">[pdf]</a></li>
+        <li>[C7] <strong>M. Ko</strong>, D. Kim, and K. Kim, "GAN based super-resolution for accurate 3D surface reconstruction from light field skin images towards haptic palpation," in <i>Proceedings of the IEEE International Conference on Machine Learning and Applications (ICMLA)</i>, 2018. <a href="https://ieeexplore.ieee.org/abstract/document/8614090">[pdf]</a></li>
+        <li>[C8] S. Kim, <strong>M. Ko</strong>, K. Lee, M. Kim, and K. Kim, "3D fall detection for single camera surveillance systems on the street," in <i>Proceedings of the IEEE Sensors Applications Symposium (SAS)</i>, 2018. <a href="https://ieeexplore.ieee.org/abstract/document/8336746">[pdf]</a></li>
+        <li>[C9] <strong>M. Ko</strong>, S. Kim, K. Lee, M. Kim, and K. Kim, "Single camera based 3D tracking for outdoor fall detection toward smart healthcare," in <i>Proceedings of the IEEE Biomedical Circuits and Systems Conference (BioSMART)</i>, 2017. <a href="https://ieeexplore.ieee.org/abstract/document/8095331">[pdf]</a></li>
+        <li>[C10] W. Chang, <strong>M. Ko</strong>, S. Kim, H. Kim, and K. Cho, "A see-through HMD tracking system based on multimodal sensing for smart space technology," in <i>Proceedings of the 41st Korean Institute of Information Scientists and Engineers (KIISE)</i>, Dec 18-20, 2014, Gangwondo, Republic of Korea.</li>
+    </ul>
+    
+    <h3>Journal</h3>
+    <ul class="publication-list">
+        <li>[J1] D. Kim, <strong>M. Ko</strong>, and K. Kim, "Skin tactile surface restoration using deep learning from a mobile image: An application for virtual skincare," <i>Skin Research and Technology</i>, DOI: 10.1111/srt.13009, 27(5), 739-750, March 2021.</li>
+        <li>[J2] <strong>M. Ko</strong>, B. Jeong, D. Kim, CE. Han, "Deep Learning Under Privileged Information for Pneumonia Detection," <i>Journal of the Institute of Electronics and Information Engineers</i>, DOI: 10.5573/ieie.2021.58.3.67, 58(3), 67-73.</li>
+        <li>[J3] <strong>M. Ko</strong>, D. Kim, and K. Kim, "Accurate depth estimation of skin surface using a light field camera toward dynamic haptic palpation," <i>Skin Research and Technology</i>, DOI: 10.1111/srt.12675, 25(4), 469-481, July 2019.</li>
+        <li>[J4] <strong>M. Ko</strong>, D. Kim, M. Kim, and K. Kim, "Illumination-insensitive skin depth estimation from a light field camera based on CGANs toward haptic palpation," <i>Electronics</i>, DOI: 10.3390/electronics7110336, 7(11), 336-356, Nov 2018.</li>
+        <li>[J5] <strong>M. Ko</strong>, S. Kim, M. Kim, and K. Kim, "A novel approach for outdoor fall detection using multidimensional features from a single camera," <i>Applied Sciences</i>, DOI: 10.3390/applsci-313943, 8(6), 984, June 11, 2018.</li>
+    </ul>
+    
+    <p><small>* Equal contribution</small></p>
+</div>
+    
+    <div class="section">
+        <h2>Misc</h2>
+        <ul>
+            In my free time, I enjoy lifting, playing basketball, rowing, watching the NBA (nuggets!), watching movies, and learning physics and math.            
+        </ul>
+    </div>
 </body>
 </html>
