@@ -10,88 +10,133 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
             padding: 20px;
-            text-align: left;
         }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+        }
+        
+        .sidebar {
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+        
+        .main-content {
+            padding: 20px;
+        }
+        
         h1, h2, h3 {
             color: #444;
+            margin-top: 0;
         }
+        
         .profile-img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             display: block;
-            margin: 0 0 20px;
+            margin: 0 auto 20px;
         }
-        .contact-info, .social-links {
+        
+        .contact-info {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             margin-bottom: 20px;
         }
+        
         .social-links a {
             text-decoration: none;
             color: #0066cc;
-            margin: 0 10px;
+            padding: 5px 0;
         }
+        
         .section {
             margin-bottom: 40px;
         }
-        .publication-list, .employment-list {
+        
+        .publication-list {
             list-style-type: none;
             padding-left: 0;
         }
-        .publication-list li, .employment-list li {
+        
+        .publication-list li {
             margin-bottom: 15px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #eee;
         }
-        /* Responsive design for smaller screens */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
             }
-            .profile-img {
-                width: 150px;
-                height: 150px;
+            
+            .sidebar {
+                position: relative;
+                width: auto;
+            }
+            
+            .social-links {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .social-links a {
+                margin: 0 10px;
             }
         }
     </style>
 </head>
 <body>
-    <section class="section">
-        <h1>Myeongseb Ko</h1>
-        <img src="ms.png" alt="Profile picture of Myeongseb Ko" class="profile-img">
+    <div class="container">
+        <aside class="sidebar">
+            <img src="ms.png" alt="Profile picture of Myeongseb Ko" class="profile-img">
+            
+            <div class="contact-info">
+                <h1>Myeongseb Ko</h1>
+                <p>Ph.D. student at Virginia Tech</p>
+                <p>Blacksburg, Virginia, USA</p>
+                <p>Email: myeongseob@vt.edu</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/myeongseob-ko-a87325175/">LinkedIn</a>
+                <a href="https://github.com/ms-ko">GitHub</a>
+                <a href="https://scholar.google.co.kr/citations?user=SzTJiGcAAAAJ&hl=en&oi=ao">Google Scholar</a>
+                <a href="https://x.com/KoMyeongseob">Twitter</a>
+            </div>
+        </aside>
         
-        <div class="contact-info">
-            <p>Ph.D. student at Virginia Tech</p>
-            <p>Blacksburg, Virginia, USA</p>
-            <p>Email: myeongseob@vt.edu</p>
-        </div>
-        
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/myeongseob-ko-a87325175/">LinkedIn</a>
-            <a href="https://github.com/ms-ko">GitHub</a>
-            <a href="https://scholar.google.co.kr/citations?user=SzTJiGcAAAAJ&hl=en&oi=ao">Google Scholar</a>
-            <a href="https://x.com/KoMyeongseob">Twitter</a>
-        </div>
-    </section>
-    
-    <section class="section">
-        <h2>About</h2>
-        <p>Hi! I am a 4th year Ph.D. student in Computer Engineering at Virginia Tech, fortunately working under the supervision of Prof. Ruoxi Jia. Prior to joining Virginia Tech, I received my M.S. (2018) and B.S. (2016) in Electronics and Information Engineering from Korea University.</p>
-        <p>I am deeply interested in exploring and understanding machine learning problems. Recently, I have been studying unlearning problems for foundation models. I am also interested in machine learning problems through the lens of data.</p>
-    </section>
-
-    <section class="section">
-        <h2>Research Publications</h2>
-        
-        <h3>Under Review</h3>
-        <ul class="publication-list">
-            <li>[P1] <strong>M. Ko</strong>, Hoang Anh Just, Charles Fleming, Ming Jin, Ruoxi Jia, "The Ripple Effect: Probing Hidden Knowledge Holes in Unlearned LLMs," Submitted to NAACL 2025.</li>
-            <li>[P2] Henry Li, Jonathan Patsenker, <strong>M. Ko</strong>, Ruoxi Jia, Yuval Kluger, "Diffusion Conditional Sampling: Solving Inverse Problems through a Frequentist's Lens," Submitted to ICLR 2025.</li>
-        </ul>
-        
-        <!-- Additional sections for Conferences, Journals, and Misc as in your previous HTML -->
-    </section>
+        <main class="main-content">
+            <section class="section">
+                <h2>About</h2>
+                <p>Hi! I am a 4th year Ph.D. student in Computer Engineering at Virginia Tech, fortunately working under the supervision of Prof. Ruoxi Jia. Prior to joining Virginia Tech, I received my M.S. (2018) and B.S. (2016) in Electronics and Information Engineering from Korea University.</p>
+                <p>I am deeply interested in exploring and understanding machine learning problems. Recently, I have been studying unlearning problems for foundation models. I am also interested in machine learning problems through the lens of data.</p>
+            </section>
+            
+            <section class="section">
+                <h2>Research Publications</h2>
+                
+                <h3>Under Review</h3>
+                <ul class="publication-list">
+                    <li>[P1] <strong>M. Ko</strong>, Hoang Anh Just, Charles Fleming, Ming Jin, Ruoxi Jia, "The Ripple Effect: Probing Hidden Knowledge Holes in Unlearned LLMs," Submitted to NAACL 2025.</li>
+                    <li>[P2] Henry Li, Jonathan Patsenker, <strong>M. Ko</strong>, Ruoxi Jia, Yuval Kluger, "Diffusion Conditional Sampling: Solving Inverse Problems through a Frequentist's Lens," Submitted to ICLR 2025.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
